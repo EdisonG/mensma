@@ -1,0 +1,10 @@
+<?php 
+session_start();
+if($_SESSION['USUARIO']){	
+	session_destroy();
+	header("location:../gui/index.php");
+}
+else{
+	header("location:../gui/index.php");
+}
+?>
