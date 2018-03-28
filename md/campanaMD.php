@@ -26,8 +26,11 @@ class CampanaMD {
             // ejecutar la consulta 
             $resultado =mysqli_query($conexion, " SELECT * FROM campanas  ");
 
-        } catch (Exception $e) {            
-            $resultado['error'] = $e->getMessage();
+        } catch (Exception $e) { 
+            $resultado = array(
+                "estado" => "ERROR",
+                "mensaje" =>  $e->getMessage()
+            );
         
         }
 
@@ -43,11 +46,20 @@ class CampanaMD {
         $query = "INSERT INTO `campanas` 
          ( `CODUSUARIO`, `TIPOLETRACAMPANA`, `IMAGENCAMPANA`, `GIFCAMPANA`, `BASECAMPANA`, `VIDEOCAMPANA`, `NUMCLIENTESCAMPANA`, `FECHAINICAMPANA`, `FECHAFINCAMPANA`, `PRECIOCAMPANA`, `FECHACREACIONCAMPANA`, `TITULOCAMPANA`, `ESLOGANCAMPANA`)
          VALUES  ( '$this->nom_usuario', '$this->tipoletra', '$this->imagen', '$this->gif', '$this->archivo', '$this->video', $this->numero_registrados, '$this->fecha_inicio', '$this->fecha_fin', 0, now() , '$this->nombre', '$this->eslogan') ";
-        echo ($query);
+        //echo ($query);
         $resultado = mysqli_query($conexion , $query);
+        
+        $resultado = array(
+            "estado" => "OK",
+            "mensaje" => "Se ejecuto correctamente"
+        );
 
-        } catch (Exception $e) {            
-            $resultado['error']= $e->getMessage();
+
+        } catch (Exception $e) {    
+            $resultado = array(
+                "estado" => "ERROR",
+                "mensaje" =>  $e->getMessage()
+            );
         
         }
 
@@ -56,13 +68,24 @@ class CampanaMD {
     } 
     function deleteCampanas() { 
         try {
+            global $conexion;
 
-            $query = "DELETE from campanas WHERE  campanas.CODCAMPANA= ".$cod_campana;
-        
+
+            $query = " DELETE from campanas WHERE  campanas.CODCAMPANA= ".$this->cod_campana;
+            echo $query. "<br>";
             $resultado =mysqli_query($conexion,$query);
-    
-            } catch (Exception $e) {            
-                $resultado['error']= $e->getMessage();
+            
+            $resultado = array(
+                "estado" => "OK",
+                "mensaje" => "Se ejecuto correctamente"
+            );
+            
+
+            } catch (Exception $e) {    
+                $resultado = array(
+                    "estado" => "ERROR",
+                    "mensaje" =>  $e->getMessage()
+                );
             
             }
     
@@ -78,9 +101,17 @@ class CampanaMD {
            WHERE  campanas.CODCAMPANA= ".$cod_campana;
         
             $resultado =mysqli_query($conexion,$query);
+
+            $resultado = array(
+                "estado" => "OK",
+                "mensaje" => "Se ejecuto correctamente"
+            );
     
-            } catch (Exception $e) {            
-                $resultado['error']= $e->getMessage();
+            } catch (Exception $e) {    
+                $resultado = array(
+                    "estado" => "ERROR",
+                    "mensaje" =>  $e->getMessage()
+                );
             
             }
     
