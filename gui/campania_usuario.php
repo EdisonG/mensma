@@ -13,7 +13,7 @@
 
   <div class="jumbotron text-center">
     <h1></h1>
-    <p>Resize this responsive page to see the effect!</p>
+    <p>Registro de campañas</p>
   </div>
 
   <div class="container">
@@ -34,8 +34,45 @@ precio (campo en la abse que llena el admin )
         </div>
 
         <div class="form-group">
-          <label for="usr">:</label>
-          <input type="text" class="form-control" id="name_campana">
+          <label for="usr">Eslogan de la Campaña:</label>
+          <input type="text" class="form-control" id="eslogan_campana">
+        </div>
+        <div class="form-group">
+          <label for="usr">Numero de registros:</label>
+          <input type="text" class="form-control" id="numero_registros_campana">
+        </div>
+        <div class="form-group">
+          <label for="usr">Tipo  de letra:</label>
+          <select class="selectpicker form-control">
+            <option>Cursiva</option>
+            <option>Negrilla</option>
+            <option>Tachada</option>
+          </select>
+
+        </div>
+        <div class="form-group">
+          <label for="usr">Mensaje:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="usr">Fecha Inicio:</label>
+          <input type="date" class="form-control" id="fecha_inicio_campana">
+        </div>
+        <div class="form-group">
+          <label for="usr">Fecha Fin:</label>
+          <input type="date" class="form-control" id="fecha_fin_campana">
+        </div>
+        <div class="form-group">
+          <label for="usr">Foto:</label>
+          <input type="text" class="form-control" id="numero_registros_campana">
+        </div>
+        <div class="form-group">
+          <label for="usr">Video:</label>
+          <input type="text" class="form-control" id="numero_registros_campana">
+        </div>
+        <div class="form-group">
+          <label for="usr">Gif:</label>
+          <input type="text" class="form-control" id="numero_registros_campana">
         </div>
 
         <button class="btn btn-success form-control">REGITRAR CAMPAÑA</button>
