@@ -8,7 +8,7 @@ require"../dp/usuarioDP.php";
 		<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css">
 	<title>MensmaSoft</title>
 </head>
-<body background="http://localhost/mensma/gui/imagenes/apps-ok.jpg" style="background-attachments: fixed">
+<body background="http://localhost/Mensma/gui/imagenes/apps-ok.jpg" style="background-attachments: fixed">
 	<center><div class="tit"><h2 style="color: #000000;" align="Center">Inicio de sesión</h2>
 		<center><div class="Ingreso">
 

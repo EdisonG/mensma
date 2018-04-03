@@ -25,8 +25,11 @@ if(isset($_POST['inactivosEstadisticas'])){
 if(isset($_POST['spamEstadisticas'])){
 	$spam=$_POST['spamEstadisticas'];
 }
+if(isset($_POST['codCampana'])){
+	$codCampana=$_POST['codCampana'];
+}
 if($procesar=="Guardar"){
-	insertarEstadistica($leido,$noleido,$privado,$inactivo,$spam,$conexion);
+	insertarEstadistica($leido,$noleido,$privado,$inactivo,$spam,$codCampana,$conexion);
 }
 
 //Datos para editar el Usuario

@@ -1,7 +1,7 @@
 <?php 
 
 include_once("campanaMD.php");
-require_once("conexion.php");
+require_once("../conexion/conexion.php");
 
 
 
@@ -38,11 +38,11 @@ $campana->$precio = 900;
 $campana->$imagen = "imagen.jpg"; 
 $campana->$video = "video.mp4"; 
 $campana->$gif = "gif.gif"; */
-//$resultado= $campana->insertCampanas();
+$resultado= $campana->insertCampanas();
 //print_r($resultado);
 
-$campana->cod_campana = 2;
-$resultado= $campana->deleteCampanas();
+/*$campana->cod_campana = 2;
+$resultado= $campana->deleteCampanas();*/
 print_r($resultado);
 
 
