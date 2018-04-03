@@ -11,10 +11,15 @@
 <body>
 
 
-  <div class="jumbotron text-center">
+  <!--<div class="jumbotron text-center">
     <h1></h1>
     <p>Registro de campañas</p>
+  </div>-->
+  <div class=" text-left">
+  <h1> INGRESAR CAMPAÑAS </h1>
+  <hr>
   </div>
+ 
 
   <div class="container">
     <!--
@@ -27,7 +32,7 @@ fecha inicio
 fecha fin
 precio (campo en la abse que llena el admin )
    -->
-    <form class="form">
+    <form class="form" method="post" action="../dp/campanaDP.php">
         <div class="form-group">
           <label for="usr">Nombre de la Campaña:</label>
           <input type="text" class="form-control" id="name_campana">
@@ -43,7 +48,7 @@ precio (campo en la abse que llena el admin )
         </div>
         <div class="form-group">
           <label for="usr">Tipo  de letra:</label>
-          <select class="selectpicker form-control">
+          <select class="selectpicker form-control" name="tipo_letra_campana">
             <option>Cursiva</option>
             <option>Negrilla</option>
             <option>Tachada</option>
@@ -52,7 +57,7 @@ precio (campo en la abse que llena el admin )
         </div>
         <div class="form-group">
           <label for="usr">Mensaje:</label>
-          <textarea class="form-control" rows="5" id="comment"></textarea>
+          <textarea class="form-control" rows="5" id="comment" class="mensaje_campana"></textarea>
         </div>
         <div class="form-group">
           <label for="usr">Fecha Inicio:</label>
@@ -68,16 +73,20 @@ precio (campo en la abse que llena el admin )
         </div>
         <div class="form-group">
           <label for="usr">Video:</label>
-          <input type="text" class="form-control" id="numero_registros_campana">
+          <input type="text" class="form-control" id="video_campana">
         </div>
         <div class="form-group">
           <label for="usr">Gif:</label>
-          <input type="text" class="form-control" id="numero_registros_campana">
+          <input type="text" class="form-control" id="gif_campana">
         </div>
 
-        <button class="btn btn-success form-control">REGITRAR CAMPAÑA</button>
+        <input type="submit" class="btn btn-success form-control" id="btn-submit">
+
+        <button class="btn btn-success form-control">REGISTRAR CAMPAÑA</button>
 
     </form>
+
+    <br><br>
 
   </div>
 

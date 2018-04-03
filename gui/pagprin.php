@@ -48,10 +48,11 @@ $(window).scroll(function() {
 <ul id="menu-bar" align="center">
     <li><a align="right">Bienvenido:  <strong><?php echo $_SESSION['USUARIOUSUARIO'];?></strong> </a></li>
     <li><a href="principal.php" target="iframe_a" >Principal</a></li>
-    <li><a href="dashboardCampanas.php" target="iframe_a" >Dashboard</a></li>
     <?php
     if($tipo=="administrador"){
     ?>
+        <li><a href="dashboardCampanas.php" target="iframe_a" >Dashboard</a></li>
+
     <li><a >Men&uacute; de Usuarios</a>
         <ul>
           <li><a align="left" href="registrarUsuario.php" target="iframe_a">Registrar Usuarios</a></li>
@@ -64,6 +65,8 @@ $(window).scroll(function() {
     <?php
     if($tipo=="usuario"){
     ?>
+     <li><a href="dashboardCampanas.php?codigo_usuario=<?php echo $_SESSION['CODIGO'];?>" target="iframe_a" >Dashboard</a></li>
+      <li><a href="campania_usuario.php" target="iframe_a" >Campañas </a></li>
       <li><a href="editar.php?id=<?php echo $_SESSION['CODIGO'];?>" target="iframe_a" >Editar Usuario </a></li>
     <?php
     }

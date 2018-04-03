@@ -23,15 +23,19 @@ function insertarUsuario($codUsuario,$usuarioUsuario,$nombreUsuario,$imagenUsuar
 		}
 
 function validar_sesion($username,$clave,$conexion){
-	$sql1=mysqli_query($conexion,"SELECT * FROM usuarios");
 	$sql=mysqli_query($conexion,"SELECT * FROM usuarios WHERE USUARIOUSUARIO='$username'");
+	$sql1=mysqli_query($conexion,"SELECT * FROM usuarios WHERE USUARIOUSUARIO='$username'");
+
+	$query = "SELECT * FROM usuarios WHERE USUARIOUSUARIO='$username'";
+	
 		if($f1=mysqli_fetch_assoc($sql1)){
 			if($username!=$f1['USUARIOUSUARIO']){
 				echo '<script>alert("USUARIO NO REGISTRADO")</script> ';
 				echo "<script>location.href='../gui/index.php'</script>";
-			}elseif($f=mysqli_fetch_assoc($sql)){
-			if($clave==$f['CONTRASENAUSUARIO']){	
-				$codigoUsuario=$f['CODUSUARIO'];
+			}
+			elseif($f=mysqli_fetch_assoc($sql)){
+			if($clave==$f['CONTRASENAUSUARIO']){
+ 				$codigoUsuario=$f['CODUSUARIO'];
 				$_SESSION['USUARIOUSUARIO']=$f['USUARIOUSUARIO'];
 				$_SESSION['CODUSUARIO']=$f['CODUSUARIO'];
 				$_SESSION['IMAGENUSUARIO']=$f['IMAGENUSUARIO'];
@@ -40,7 +44,8 @@ function validar_sesion($username,$clave,$conexion){
 				//echo($query);exit;
 				$resultado=mysqli_query($conexion,$query);
 				header("location:../gui/pagprin.php");
-			}else{
+			}
+			else{
 				echo '<script>alert("Contrasena no valida")</script> ';
 				echo "<script>location.href='../gui/index.php'</script>";
 			}	
