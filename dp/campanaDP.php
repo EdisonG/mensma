@@ -23,22 +23,22 @@ if(isset($_POST['name_campana'])){
 if(isset($_POST['eslogan_campana'])){
 	$tipoletra=$_POST['eslogan_campana'];
 }
-if(isset($_POST['numero_registros_campana'])){
-	$imagen=$_POST['numero_registros_campana'];
+if(isset($_POST['imagen_campana'])){
+	$imagen=$_POST['imagen_campana'];
 }
-if(isset($_POST['tipo_letra_campana'])){
-	$gif=$_POST['tipo_letra_campana'];
+if(isset($_POST['gif_campana'])){
+	$gif=$_POST['gif_campana'];
 }
 if(isset($_POST['mensaje_campana'])){
 	$archivo=$_POST['mensaje_campana'];
 }
-if(isset($_POST['fecha_inicio_campana'])){
-	$video=$_POST['fecha_inicio_campana'];
+if(isset($_POST['video_campana'])){
+	$video=$_POST['video_campana'];
 }
-if(isset($_POST['fecha_fin_campana'])){
-	$numero_registrados=$_POST['fecha_fin_campana'];
+if(isset($_POST['numero_registros_campana'])){
+	$numero_registrados=$_POST['numero_registros_campana'];
 }
-if(isset($_POST['nom_usuario'])){
+if(isset($_POST['numero_registros_campana'])){
 	$fecha_inicio=$_POST['nom_usuario'];
 }
 if(isset($_POST['nom_usuario'])){
