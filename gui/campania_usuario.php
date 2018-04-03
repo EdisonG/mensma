@@ -69,7 +69,7 @@ precio (campo en la abse que llena el admin )
         </div>
         <div class="form-group">
           <label for="usr">Foto:</label>
-          <input type="text" class="form-control" id="numero_registros_campana">
+          <input type="text" class="form-control" id="imagen_campana">
         </div>
         <div class="form-group">
           <label for="usr">Video:</label>
