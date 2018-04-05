@@ -28,12 +28,12 @@ function insertCampana($nom_usuario,$tipoletra,$imagen,$gif,$archivo,$video,$num
 		$sql = "INSERT INTO `campanas` 
          ( `CODUSUARIO`, `TIPOLETRACAMPANA`, `IMAGENCAMPANA`, `GIFCAMPANA`, `BASECAMPANA`, `VIDEOCAMPANA`, `NUMCLIENTESCAMPANA`, `FECHAINICAMPANA`, `FECHAFINCAMPANA`, `PRECIOCAMPANA`, `FECHACREACIONCAMPANA`, `TITULOCAMPANA`, `ESLOGANCAMPANA`)
          VALUES  ( '$nom_usuario', '$tipoletra', '$imagen', '$gif', '$archivo', '$video', $numero_registrados, '$fecha_inicio', '$fecha_fin', 0, now() , '$nombre', '$eslogan') ";
-        //echo ($query);
+       // echo ($sql); die();
 		//echo($sql);exit;
 		$cursor = $conn->Prepare($sql);
 		$cursor->execute();
 		echo '<script>alert("Se ingreso correctamente !")</script> ';
-		echo "<script>location.href='../gui/dashboardCampana.php'</script>";
+		echo "<script>location.href='../gui/pgprin.php'</script>";
 	}
 	catch(PDOException $e)
 	{
@@ -54,7 +54,7 @@ function deleteCampana($cod_campana)
 		$cursor = $conn->Prepare($sql);
 		$cursor->execute();
 		echo '<script>alert("Se elimino correctamente !")</script> ';
-		echo "<script>location.href='../gui/dashboardCampana.php'</script>";
+		echo "<script>location.href='../gui/pgprin.php'</script>";
 	}
 	catch(PDOException $e)
 	{

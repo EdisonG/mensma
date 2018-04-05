@@ -1,6 +1,6 @@
 <?php 
 
-include_once("campanaMD.php");
+/*include_once("campanaMD.php");
 require_once("../conexion/conexion.php");
 
 
@@ -24,7 +24,7 @@ $campana->archivo = "excel.csv";
 $campana->precio = 900; 
 $campana->imagen = "imagen.jpg"; 
 $campana->video = "video.mp4"; 
-$campana->gif = "gif.gif";
+$campana->gif = "gif.gif";*/
 
 /*$campana['nom_usuario = "admin";
 $campana->$eslogan = "eslogan prueba insert"; 
@@ -38,13 +38,18 @@ $campana->$precio = 900;
 $campana->$imagen = "imagen.jpg"; 
 $campana->$video = "video.mp4"; 
 $campana->$gif = "gif.gif"; */
-$resultado= $campana->insertCampanas();
+//$resultado= $campana->insertCampanas();
 //print_r($resultado);
 
 /*$campana->cod_campana = 2;
 $resultado= $campana->deleteCampanas();*/
-print_r($resultado);
+//print_r($resultado);
 
 
 // delete
+// obtener path 
+
+
+$target_path = $_SERVER['DOCUMENT_ROOT'] . "/uploads/";
+echo $target_path; die();
 
