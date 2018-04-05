@@ -2,7 +2,7 @@
 require"../conexion/conexion.php";
 session_start();
 
-function insertarUsuario($codUsuario,$usuarioUsuario,$nombreUsuario,$imagenUsuario,$pass,$rpass,$conexion){
+function insertarUsuario($codUsuario,$usuarioUsuario,$nombreUsuario,$mailUsuario,$pass,$rpass,$conexion){
 	$validarnick=mysqli_query($conexion,"SELECT * FROM usuarios WHERE USUARIOUSUARIO='$usuarioUsuario'");
 	$validar_nick=mysqli_num_rows($validarnick);
 		if($pass==$rpass){
@@ -10,7 +10,7 @@ function insertarUsuario($codUsuario,$usuarioUsuario,$nombreUsuario,$imagenUsuar
 				echo ' <script language="javascript">alert("Atencion, ya existe el USUARIO designado, verifique los datos");</script> ';
 				header("location:../gui/registrarUsuario.php");
 			}else{
-				$query="INSERT INTO `usuarios`(`CODUSUARIO`, `USUARIOUSUARIO`, `CONTRASENAUSUARIO`, `NOMBREUSUARIO`, `FECHACREACIONUSUARIO`, `IMAGENUSUARIO`, `TIPOUSUARIO`) VALUES('$codUsuario','$usuarioUsuario','$pass','$nombreUsuario',now(),'$imagenUsuario','usuario')";
+				$query="INSERT INTO `usuarios`(`CODUSUARIO`, `USUARIOUSUARIO`, `CONTRASENAUSUARIO`, `NOMBREUSUARIO`, `FECHACREACIONUSUARIO`, `IMAGENUSUARIO`, `TIPOUSUARIO`,`MAILUSUARIO`) VALUES('$codUsuario','$usuarioUsuario','$pass','$nombreUsuario',now(),'','usuario','$mailUsuario')";
 			//	echo($query);exit;
 				$resultado=mysqli_query($conexion,$query);
 			echo ' <script language="javascript">alert("Usuario registrado con éxito");</script> ';	

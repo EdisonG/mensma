@@ -16,7 +16,7 @@
     <p>Registro de campañas</p>
   </div>-->
   <div class=" text-left">
-  <h1> INGRESAR CAMPAÑAS FINALss </h1>
+  <h1> INGRESAR CAMPAÑAS  </h1>
   <hr>
   </div>
  

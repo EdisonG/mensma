@@ -37,8 +37,8 @@ if(isset($_POST['usuarioUsuario'])){
 if(isset($_POST['nombreUsuario'])){
 	$nombreUsuario=$_POST['nombreUsuario'];
 }
-if(isset($_POST['imagenUsuario'])){
-	$imagenUsuario=$_POST['imagenUsuario'];
+if(isset($_POST['mailUsuario'])){
+	$mailUsuario=$_POST['mailUsuario'];
 }
 if(isset($_POST['pass'])){
 	$pass=$_POST['pass'];
@@ -47,7 +47,7 @@ if(isset($_POST['rpass'])){
 	$rpass=$_POST['rpass'];
 }
 if($procesar=="Guardar"){
-	insertarUsuario($codUsuario,$usuarioUsuario,$nombreUsuario,$imagenUsuario,$pass,$rpass,$conexion);
+	insertarUsuario($codUsuario,$usuarioUsuario,$nombreUsuario,$mailUsuario,$pass,$rpass,$conexion);
 }
 
 //Datos para editar el Usuario

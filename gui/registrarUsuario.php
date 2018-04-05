@@ -39,6 +39,7 @@ $sql = "select * from usuarios";
                     <td><b><font>Cedula</font></b></td>
                     <td><b><font>Nombre Cliente</font></b></td>
                     <td><b><font>Usuario</font></b></td>
+                    <td><b><font>Email</font></b></td>
                     <td><b><font>Fecha Creación</font></b></td>
                     <td><b><font>Configuracion</font></b></td>
                     <td><b><font>Contraseña</font></b></td>
@@ -55,6 +56,7 @@ $sql = "select * from usuarios";
                     <td style="font-size: 18pt"><?php echo($fila["CODUSUARIO"]); ?></td>
                     <td style="font-size: 18pt"><?php echo($fila["NOMBREUSUARIO"]); ?></td>
                     <td style="font-size: 18pt"><?php echo($fila["USUARIOUSUARIO"]); ?></td>
+                    <td style="font-size: 18pt"><?php echo($fila["MAILUSUARIO"]); ?></td>
                     <td style="font-size: 18pt"><?php echo($fila["FECHACREACIONUSUARIO"]); ?></td>
                     <td style="font-size: 18pt"><?php echo($fila["CONTRASENAUSUARIO"]); ?></td>
                     <td><a/><input type="button" value="Actualizar"  onclick="cargarModalActualizar(<?php echo("'".$fila["CODUSUARIO"]."' , '".$fila["NOMBREUSUARIO"]."', '".$fila["USUARIOUSUARIO"]."', '".$fila["CONTRASENAUSUARIO"]."'") ?>);"  data-toggle="modal" data-target="#modificar" ></a></td>
@@ -82,6 +84,8 @@ $sql = "select * from usuarios";
                 <div class="modal-body">
                   <form method="post" action="../DP/usuarioDP.php" align="left" enctype="multipart/form-data" >
                         <legend  style="font-size: 14pt" align="center"><b>Registro</b></legend>
+                        <label style="font-size: 10pt" px><b>Ingresar Email</b></label><br>
+                          <input type="email" name="mailUsuario" class="form-control" placeholder="Ingrese Email" required /><br>
                           <label style="font-size: 10pt" px><b>Ingresar Cédula de identidad</b></label><br>
                           <input type="text" name="codUsuario" class="form-control" placeholder="Ingrese Cédula" /><br>
                           <label style="font-size: 10pt"><b>Ingresar Usuario</b></label><br>
