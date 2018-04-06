@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `bitacoras` (
   CONSTRAINT `FK_REGISTRA` FOREIGN KEY (`CODUSUARIO`) REFERENCES `usuarios` (`CODUSUARIO`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla mensma.bitacoras: ~20 rows (aproximadamente)
+-- Volcando datos para la tabla mensma.bitacoras: ~22 rows (aproximadamente)
 /*!40000 ALTER TABLE `bitacoras` DISABLE KEYS */;
 INSERT INTO `bitacoras` (`CODBITACORA`, `CODUSUARIO`, `DESCRIPCIONBITACORA`, `FECHABITACORA`) VALUES
 	(1, 'admin', 'ingreso al sistema', '2018-04-03 15:23:54'),
